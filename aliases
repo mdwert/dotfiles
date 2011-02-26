@@ -1,0 +1,53 @@
+###Aptitude stuff: TODO: Check environment before adding###
+alias install='sudo apt-get install'
+alias update='sudo apt-get update'
+alias remove='sudo apt-get remove'
+alias search='apt-cache search'
+alias upgrade='sudo apt-get update && sudo apt-get upgrade'
+alias dupgrade='sudo apt-get update && sudo apt-get dist-upgrade'
+alias orphand='sudo deborphan | xargs sudo apt-get -y remove --purge'
+alias cleanup='sudo apt-get autoclean && sudo apt-get autoremove && sudo apt-get clean && sudo apt-get remove && orphand'
+alias updatedb='sudo updatedb'
+alias sources='sudo vim /etc/apt/sources.list'
+alias show='apt-get show'
+
+#alias aza='ssh -X mdwert@azathoth'
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -a'
+alias l='ls -CF'
+alias sl='ls'
+alias lsa='ls -lah'
+alias lls='ls -l -h -g -F --color=auto'
+alias lsv='ls -aCF' #List files horizontally
+alias lss='la -am' #sort by size
+alias lsd='ls -latr' #sort by date
+
+alias svi='sudo vim'
+
+# enable color support of ls
+#if [ -x /usr/bin/dircolors ]; then
+##	eval '`dircolors -b`'
+#	alias ls='ls --color=auto'
+#	alias dir='dir --color=auto'
+#	alias vdir='vdir --color=auto'
+#
+#	alias grep='grep --color=auto'
+#	alias fgrep='fgrep --color=auto'
+#	alias egrep='egrep --color=auto'
+#fi
+#
+alias reload='source ~/.zshrc'
+
+#Ask before clobbering a file, use -f to override
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+#Use human-readable filesizes
+alias du='du -h'
+alias df='df -h'
+
+###Set directory Colors
+eval "`dircolors -b ~/.dircolors`"
+alias aza='ssh -t -X azathoth screen -t remotesession'

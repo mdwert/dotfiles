@@ -1,0 +1,117 @@
+# Easy extract
+extract () {
+  if [ -f $1 ] ; then
+      case $1 in
+          *.tar.bz2)   tar xvjf $1    ;;
+          *.tar.gz)    tar xvzf $1    ;;
+          *.bz2)       bunzip2 $1     ;;
+          *.rar)       rar x $1       ;;
+          *.gz)        gunzip $1      ;;
+          *.tar)       tar xvf $1     ;;
+          *.tbz2)      tar xvjf $1    ;;
+          *.tgz)       tar xvzf $1    ;;
+          *.zip)       unzip $1       ;;
+          *.Z)         uncompress $1  ;;
+          *.7z)        7z x $1        ;;
+          *)           echo "don't know how to extract '$1'..." ;;
+      esac
+  else
+      echo "'$1' is not a valid file!"
+  fi
+}
+
+# Makes directory then moves into it
+function mkcdr {
+    mkdir -p -v $1
+    cd $1
+}
+
+# Creates an archive from given directory
+mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
+mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
+
+######################################################
+#----------Encrypt/Decrypt---------------------------#
+#requires gpg/gpg2
+encrypt ()
+{
+	gpg -ac --no-options "$1"
+}
+
+decrypt ()
+{
+	gpg --no-options "$1"
+}
+
+function ii() # get current host related info
+{
+    echo -e "\nYou are logged on ${RED}$HOST"
+    echo -e "\nAdditionnal information:$NC " ; uname -a
+    echo -e "\n${RED}Users logged on:$NC " ; w -h
+    echo -e "\n${RED}Current date :$NC " ; date
+    echo -e "\n${RED}Machine stats :$NC " ; uptime
+    echo -e "\n${RED}Memory stats :$NC " ; free
+    my_ip 2>&. ;
+    echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP:."Not connected"}
+    echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP:."Not connected"}
+    echo
+}
+
+# Get IP (call with myip)
+function myip {
+  myip=`elinks -dump http://checkip.dyndns.org:8245/`
+  echo "${myip}"
+}
+
+cd() {
+	if [ -n "$1" ]; then
+	  builtin cd "$@" && ll
+	else
+	  builtin cd ~ && ll
+	fi
+}
+
+function apt-history(){
+      case "$1" in
+        install)
+              cat /var/log/dpkg.log | grep 'install '
+              ;;
+        upgrade|remove)
+              cat /var/log/dpkg.log | grep $1
+              ;;
+        rollback)
+              cat /var/log/dpkg.log | grep upgrade | \
+                  grep "$2" -A10000000 | \
+                  grep "$3" -B10000000 | \
+                  awk '{print $4"="$5}'
+              ;;
+        *)
+              cat /var/log/dpkg.log
+              ;;
+      esac
+}
+
+up(){
+  local d=""
+  limit=$1
+  for ((i=1; i <= limit; i++))
+    do
+      d=$d/..
+    done
+  d=$(echo $d | sed 's/^\///')
+  if [ -z "$d" ]; then
+    d=..
+  fi
+  cd $d
+}
+
+# overwrite a file with zeroes - http://www.shell-fu.org/lister.php?id=94  
+zero() {  
+  case "$1" in  
+    "")     echo "Usage: zero <file>"  
+            return -1;  
+  esac  
+  filesize=`wc -c  "$1" | awk '{print $1}'`  
+  dd if=/dev/zero of=$1 count=$filesize bs=1  
+}  
