@@ -20,6 +20,7 @@ call vundle#rc()
 " Plugins " {{{
     
     Bundle 'zshr.vim'
+    Bundle 'NERD_tree-Project'
     Bundle "git://github.com/vim-scripts/a.vim.git"
     Bundle "CTAGS-Highlighting"
     Bundle "git://github.com/tpope/vim-repeat.git"
