@@ -1,0 +1,75 @@
+[submodule "vim/bundle/zshr"]
+	path = vim/bundle/zshr
+	url = git://github.com/vim-scripts/zshr
+[submodule "vim/bundle/a.vim"]
+	path = vim/bundle/a.vim
+	url = git://github.com/vim-scripts/a.vim
+[submodule "vim/bundle/CTAGS-Highlighting"]
+	path = vim/bundle/CTAGS-Highlighting
+	url = git://github.com/vim-scripts/CTAGS-Highlighting
+[submodule "vim/bundle/ctags.vim"]
+	path = vim/bundle/ctags.vim
+	url = git://github.com/vim-scripts/ctags.vim
+[submodule "vim/bundle/DarkZen-Color-Scheme"]
+	path = vim/bundle/DarkZen-Color-Scheme
+	url = git://github.com/vim-scripts/DarkZen-Color-Scheme
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = git://github.com/vim-scripts/fugitive
+[submodule "vim/bundle/fugitive.vim"]
+	path = vim/bundle/fugitive.vim
+	url = git://github.com/vim-scripts/fugitive.vim
+[submodule "vim/bundle/neverland.vim--All-colorschemes-suck"]
+	path = vim/bundle/neverland.vim--All-colorschemes-suck
+	url = git://github.com/vim-scripts/neverland.vim--All-colorschemes-suck
+[submodule "vim/bundle/Night-Vision-Colorscheme"]
+	path = vim/bundle/Night-Vision-Colorscheme
+	url = git://github.com/vim-scripts/Night-Vision-Colorscheme
+[submodule "vim/bundle/project.tar.gz"]
+	path = vim/bundle/project.tar.gz
+	url = git://github.com/vim-scripts/project.tar.gz
+[submodule "vim/bundle/snipmate.vim"]
+	path = vim/bundle/snipmate.vim
+	url = git://github.com/vim-scripts/snipmate.vim
+[submodule "vim/bundle/SuperTab"]
+	path = vim/bundle/SuperTab
+	url = git://github.com/vim-scripts/SuperTab
+[submodule "vim/bundle/surround.vim"]
+	path = vim/bundle/surround.vim
+	url = git://github.com/vim-scripts/surround.vim
+[submodule "vim/bundle/The-NERD-Commenter"]
+	path = vim/bundle/The-NERD-Commenter
+	url = git://github.com/vim-scripts/The-NERD-Commenter
+[submodule "vim/bundle/The-NERD-tree"]
+	path = vim/bundle/The-NERD-tree
+	url = git://github.com/vim-scripts/The-NERD-tree
+[submodule "vim/bundle/vim-abolish"]
+	path = vim/bundle/vim-abolish
+	url = git://github.com/vim-scripts/vim-abolish
+[submodule "vim/bundle/vim-cucumber"]
+	path = vim/bundle/vim-cucumber
+	url = git://github.com/vim-scripts/vim-cucumber
+[submodule "vim/bundle/vim-rails"]
+	path = vim/bundle/vim-rails
+	url = git://github.com/vim-scripts/vim-rails
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = git://github.com/vim-scripts/vim-repeat
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = git://github.com/vim-scripts/vim-surround
+[submodule "vim/bundle/vim-unimpaired"]
+	path = vim/bundle/vim-unimpaired
+	url = git://github.com/vim-scripts/vim-unimpaired
+[submodule "vim/bundle/vim-vividchalk"]
+	path = vim/bundle/vim-vividchalk
+	url = git://github.com/vim-scripts/vim-vividchalk
+[submodule "vim/bundle/wargreycolorscheme"]
+	path = vim/bundle/wargreycolorscheme
+	url = git://github.com/vim-scripts/wargreycolorscheme
+[submodule "vim/bundle/zshr.vim"]
+	path = vim/bundle/zshr.vim
+	url = git://github.com/vim-scripts/zshr.vim
+[submodule "vim/vundle.git"]
+	path = vim/vundle.git
+	url = git://github.com/gmarik/vundle.git
