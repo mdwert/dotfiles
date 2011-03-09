@@ -3,13 +3,19 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-syntax on
+set nocompatible
+syntax enable
 filetype plugin indent on
 set tabstop=4
 set smarttab
 set shiftwidth=2
 set autoindent
+set smartindent
+set ruler
+set number
+set showcmd
 set expandtab
+set backspace=indent,eol,start
 
 set dir=~/.vim/swap// 
 
@@ -43,9 +49,12 @@ call vundle#rc()
     Bundle 'SuperTab'
     Bundle 'The-NERD-tree'
     Bundle 'The-NERD-Commenter'
+    Bundle 'syntaxconkyrc.vim'
     "" TODO: Organize into categories
 " }}}""
 
 " colors and the suchforth "
 set t_Co=256
 colorscheme vividchalk 
+syntax enable
+set incsearch 
