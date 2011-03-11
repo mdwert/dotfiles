@@ -126,7 +126,7 @@ syntax enable
 if MySys() == "windows"
 	set gfn=Consolas:h9
 elseif MySys() == "linux"
-	set gfn=Envy\ Code\ R\ 10
+	set gfn=Envy\ Code\ R\ 8 
 	set shell=$SHELL
 endif
 
